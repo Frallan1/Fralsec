@@ -2,7 +2,29 @@ var contextMenus = {};
 
 contextMenus.createCounterString =
     chrome.contextMenus.create(
-        {"title":"Generate Counterstring",
+        {"title":"Gooddgle",
+        "contexts" : ["selection"]
+        },
+        function (){
+            if(chrome.runtime.lastError){
+                console.error(chrome.runtime.lastError.message);
+            }
+        }
+    );
+contextMenus.doSomethingelse =
+    chrome.contextMenus.create(
+        {"title":"Virustotal",
+        "contexts" : ["selection"]
+        },
+        function (){
+            if(chrome.runtime.lastError){
+                console.error(chrome.runtime.lastError.message);
+            }
+        }
+    );
+contextMenus.powershell =
+    chrome.contextMenus.create(
+        {"title":"PW",
         "contexts" : ["selection"]
         },
         function (){
@@ -16,13 +38,23 @@ chrome.contextMenus.onClicked.addListener(contextMenuHandler);
 
 
 function contextMenuHandler(info, tab){
-  var newURL = "http://stackoverflow.com/";
-  chrome.tabs.create({ url: newURL },function (tab) {
-        chrome.tabs.onUpdated.addListener(function listener (tabId, info) {
-            if (info.status === 'complete' && tabId === tab.id) {
-                chrome.tabs.onUpdated.removeListener(listener);
-                chrome.tabs.executeScript({file: "js/hohe.js"});
-            }
-        });
-  });
+
+    if(info.menuItemId===contextMenus.createCounterString){
+        chrome.tabs.executeScript({
+            file: 'js/counterstring.js'
+          });
+    }
+    if(info.menuItemId===contextMenus.doSomethingelse){
+      assignedUrl = 'https://stackoverflow.com/'
+      //chrome.tabs.create({ url: assignedUrl },function(tab) {
+          chrome.tabs.executeScript({
+              file: 'js/vt.js'
+          });
+      //  });
+    };
+    if(info.menuItemId===contextMenus.powershell){
+        chrome.tabs.executeScript({
+            code: "console.log('Hello pw')"
+          });
+    }
 }
