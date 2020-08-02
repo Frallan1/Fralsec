@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="indexmain.css">
+    <link rel="stylesheet" href="History/History.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="Console/normalize.min.css">
+    <link rel="stylesheet" href="Console/style.css">
+  </head>
+    <body>
+      <div class="navbar">
+        <a id="ENDE" style="background: var(--nav-selected);" ><img src="res/pic/codeORANGE.png" style="height:30px;margin-top:10px"></a>
+        <a id="REFREASHER" style="border-left: 2px solid #F3A536;"><img src="res/pic/refreshORANGE.png" style="height:30px;margin-top:10px"></a>
+      </div>
+      <div class="sub-navbar-ED">
+        <a id="Encode">Encode</a>
+        <a id="Decode">Decode</a>
+      </div>
+      <div class="sub-navbar-History">
+        <a id="Clear">Clear</a>
+        <a id="Filter">Filter</a>
+      </div>
+
+      <!-- partial:index.partial.html -->
+      <div class='main'>
+        <div class='console'>
+          <div class='console-inner'>
+            <div id="outputs">
+            </div>
+            <div class='output-cmd'><textarea autofocus class='console-input' placeholder="..."></textarea></div>
+          </div>
+        </div>
+      </div>
+
+      <div class='history'>
+        <div id='h-container'>
+        </div>
+      </div>
+
+  </body>
+<script type="text/javascript" src="History/History.js"></script>
+<script type="text/javascript" src="indexmain.js"></script>
+<!-- partial -->
+<script src='Console/jquery.min.js'></script>
+<script src='Console/markdown-it.min.js'></script>
+<script src='Console/autosize.min.js'></script>
+<script src='Console/browser.js'></script>
+<script  src='Console/script.js'></script>
+</html>

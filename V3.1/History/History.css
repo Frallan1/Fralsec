@@ -1,0 +1,61 @@
+.history {
+  margin-top:100px;
+  position: fixed;
+  font-family: monospace,monospace;
+  color: #fff;
+  height:300px;
+  width:100%;
+  overflow-y: auto;
+  background: #282828;
+  z-index: 100;
+  line-height: 1.9;
+  padding-top:5px;
+}
+#h-item{
+  display:  inline-block;
+  width:100%;
+  margin-top:-5px;
+  padding:0;
+  font-size:0;
+}
+#h-item div {
+  font-size: 16px;
+}
+.h-item-counter {
+  color: #cccccc;
+  opacity: 0.6;
+  text-decoration: none;
+  float: left;
+}
+.h-item-counter:hover {
+  color: #cccccc;
+  opacity:1.0;
+  text-decoration: none;
+  float: left;
+}
+.h-item-content {
+  color: #ffff;
+  opacity: 0.8;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  float: left;
+  margin-left:30px;
+  max-width:130px;
+}
+.h-item-rep {
+  color: #f3a536;
+  opacity: 0.8;
+  text-decoration: none;
+  float: right;
+  margin-right:30px;
+}
+.like{
+  position: relative;
+  top: 3px;
+  padding-right:2px;
+}
+.disslike{
+  position: relative;
+  top: 5px;
+  transform: rotate(180deg);
+}

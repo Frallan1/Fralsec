@@ -1,0 +1,109 @@
+:root {
+  --nav-color: #282828;
+  --nav-colorGrad:#353535;
+  --nav-orange:#f3a536;
+  --nav-selected:#474747;
+}
+
+
+
+body {
+  width:300px;
+  height:300px;
+  margin:0px;
+}
+.terminal {
+  height:100%;
+  margin-top: 100px; /* Add a top margin to avoid content overlay */
+  border: 3px solid #FFFFFF;
+}
+.main {
+  margin-top:100px;
+}
+
+
+/* The navigation bar */
+.navbar {
+  font-family: Helvetica;
+  font-weight: 700;
+  font-size: 15px;
+  margin-left: 0;
+  overflow: hidden;
+  background: linear-gradient(var(--nav-selected), var(--nav-colorGrad));
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  height:50px;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  display: block;
+  color: var(--nav-orange);
+  text-align: center;
+  padding: 0px 0px 16px;
+  text-decoration: none;
+  width:148px;
+  height:50px;
+  cursor:pointer;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  /*background: var(--nav-selected);*/
+}
+.sub-navbar-ED {
+  font-family: Helvetica;
+  font-weight: 700;
+  font-size: 15px;
+  margin-left: 0;
+  overflow: hidden;
+  margin-top:50px;
+  background-color: var(--nav-selected);
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  height:50px;
+}
+.sub-navbar-ED  a {
+  float: left;
+  display: block;
+  color: var(--nav-orange);
+  text-align: center;
+  padding: 16px 0px 16px;
+  text-decoration: none;
+  width:50%;
+  height:50px;
+}
+.sub-navbar-ED  a:hover {
+  background: #737373;
+  color: black;
+}
+.sub-navbar-History {
+  font-family: Helvetica;
+  font-weight: 700;
+  font-size: 15px;
+  margin-left: 0;
+  overflow: hidden;
+  margin-top:50px;
+  background-color: var(--nav-selected);
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  height:50px;
+}
+.sub-navbar-History  a {
+  float: left;
+  display: block;
+  color: var(--nav-orange);
+  text-align: center;
+  padding: 16px 0px 16px;
+  text-decoration: none;
+  width:50%;
+  height:50px;
+}
+.sub-navbar-History  a:hover {
+  background: #737373;
+  color: black;
+}

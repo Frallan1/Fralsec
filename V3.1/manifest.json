@@ -1,0 +1,64 @@
+{
+	"browser_action": {
+	"default_popup": "popup.html"
+},
+"manifest_version": 2,
+"name": "Fralsec",
+"version": "3.1",
+"description": "Ip/Url lookup with interactive DOM interface. Including limited Console, and dashboard features.",
+"background": {
+	"persistent": true,
+	"scripts": ["background.js"]
+  },
+"permissions": [
+	 "file:///notification.html*",
+	 "https://stackoverflow.com/",
+	 "https://www.virustotal.com/gui/home/url",
+	 "https://urlscan.io/",
+	 "https://defense-eu.conferdeploy.net/*",
+	 "tabs",
+	 "contextMenus",
+	 "activeTab"
+   ],
+	"content_scripts": [
+		{
+			"matches": ["*://defense-eu.conferdeploy.net/*"],
+			"js": ["History/defense.js","automation.js"]
+		},
+		{
+			"matches":["file://Homepage/notification.html"],
+			"js":["Homepage/js/alertHandle.js"]
+		}
+	],
+	"icons": { "16": "res/pic/Fralsec16.png",
+	   "48": "res/pic/Fralsec48.png",
+	  "128": "res/pic/Fralsec128.png" },
+	"commands": {
+		"page-down": {
+		"suggested_key": {
+		  "default": "Shift+Alt+S"
+		},
+		"description": "Foo"
+	  },
+	  "page-up": {
+		"suggested_key": {
+		  "default": "Shift+Alt+W"
+		},
+		"description": "Bar"
+	  },
+	  "temp": {
+		"suggested_key": {
+		  "default": "Shift+Alt+Q",
+		  "mac": "Command+Shift+Y"
+		},
+		"description": "Hello world"
+	  },
+		"toggle-feature-foo": {
+		  "suggested_key": {
+			"default": "Ctrl+Shift+Y",
+			"mac": "Command+Shift+Y"
+		  },
+		  "description": "Toggle feature foo"
+		}
+	}
+}
